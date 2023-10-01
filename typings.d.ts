@@ -1,5 +1,6 @@
 declare module 'react-native-ico-cryptocurrency' {
     import { ReactNode } from 'react';
+    import { SvgProps, AdditionalProps } from 'react-native-svg';
 
     type iconNames = '0xbtc' |
       '2give' |
@@ -504,7 +505,7 @@ declare module 'react-native-ico-cryptocurrency' {
       badge?: number | string | badgeTypeObj;
     }
 
-    const Icon: (props: IconProps) => ReactNode;
+    const Icon: (props: IconProps & SvgProps & AdditionalProps) => ReactNode;
 
     export { iconNames };
     export default Icon;
